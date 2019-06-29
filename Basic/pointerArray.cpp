@@ -3,8 +3,10 @@
 using namespace std;
 
 void printValues(int* arr, int len) {
-    for(int i =0;i<len;++i)
+    for(int i =0;i<len;++i){
         cout << arr[i] << " ";
+        cout << *(arr+i) << " ";
+    }
     cout << endl;
 }
 
@@ -20,4 +22,8 @@ int main(){
     cout << "size(&arr)\t" << sizeof(&arr) << endl;
 
     printValues(arr, sizeof(arr)/sizeof(arr[0])); //array automatically dcecays to pointer.
+
+    char* setnence = "Is this a sentence?\n";
+    cout << setnence;
+    cout << setnence << endl;
 }

@@ -1,1 +1,1 @@
-    // std::cout << dPtr;
+cout << ab << endl;
