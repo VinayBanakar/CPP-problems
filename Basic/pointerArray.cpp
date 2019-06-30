@@ -16,6 +16,7 @@ int main(){
     cout << "arr[1]\t" << &arr[1] << endl;
     cout << "&arr\t" << &arr << endl;
     cout << "*arr\t" << *arr << endl;
+    cout << "arr\t" << arr << endl;
 
     cout << "size(arr)\t" << sizeof(arr) << endl;
     cout << "size(*arr)\t" << sizeof(*arr) << endl;
@@ -23,7 +24,21 @@ int main(){
 
     printValues(arr, sizeof(arr)/sizeof(arr[0])); //array automatically dcecays to pointer.
 
-    char* setnence = "Is this a sentence?\n";
+    const char* setnence = "Is this a sentence?\n";
     cout << setnence;
-    cout << setnence << endl;
+    cout << *setnence << endl;
+
+    //Dynamic arrays
+
+    cout << "enter array lenght:";
+    int len;
+    cin >> len;
+    int* dynArr = new int[len];
+
+    cout << *dynArr << endl;
+    delete[] dynArr;
+
+    int* dynZarr = new int[6]{1,2,3,4,5,6}; // Size must be expliccitly told for dynamic errors.
+    delete[] dynZarr;
+
 }

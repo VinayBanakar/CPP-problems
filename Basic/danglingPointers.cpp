@@ -28,7 +28,7 @@ int main(){
      * the value of the object ab is pointing to, in this case 5.
      * 
      * After delete ab; the ab variable exists but the memory its pointing to is let go of.
-     * delete ab; will delte the object and stops pointing to memory in the heap. Dereference 
+     * delete ab; will delete the object and stops pointing to memory in the heap. Dereferenced. 
      * Now this acquired heap memory is given back to the OS, but the allocator will keep
      * it until process ends to reuse it when memory is needed again. As requesting memory
      * from OS is a heavy operation.
