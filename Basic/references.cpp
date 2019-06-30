@@ -133,9 +133,8 @@ int main(){
 
     //Creating with new
     Student* stoo = new Student[6]; // delete this later.
-    len = sizeof(stoo)/sizeof(stoo[0]);
-    cout << "len====="<<len<< endl;
     populateInfo(stoo, len, currId);
+    delete[] stoo;
 }
 
 void populateInfo(Student StudentList[], int len, int& currId){
