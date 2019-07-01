@@ -18,7 +18,10 @@ template<typename T>
 class A{
     public:
         T val;
-    A(T x=0):val(x){}
+    A(T x=1):val(x){
+        if(x<=0)
+            throw std::runtime_error("Initialized with 0");
+    }
 
     /**
      * ==== Right to left ====
@@ -65,9 +68,16 @@ void print(Array<char, 6> &array){
 }
 
 int main(){
-    A<int> a1(5);
-    A<int> a2(6);
-    std::cout << min(a1,a2).val << std::endl;
+   try{
+        A<int> a1(5);
+        A<int> a2(6);
+        std::cout << min(a1,a2).val << std::endl;  
+
+        A<int> a3(0);
+   } 
+   catch(std::exception &exception){
+        std::cerr << "Exception for A because: " << exception.what() << std::endl;
+   }
 
     Array<int,5> arr;
     arr[0] = 1;

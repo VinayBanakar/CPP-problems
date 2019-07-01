@@ -10,7 +10,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/Basic/selectionSort",
-            "preLaunchTask": "g++ c++11 std",
+            "preLaunchTask": "g++ c++11 std", // see tasks.json
             "internalConsoleOptions": "openOnSessionStart",
             "logging": {
                 "moduleLoad": false,
